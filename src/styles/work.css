@@ -1,0 +1,249 @@
+.work {
+  background: linear-gradient(180deg, #3f0809 0%, var(--bg) 100%);
+}
+.work-heading { max-width: 46rem; }
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.project-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.1rem, 2.6vw, 2.2rem);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse 60% 70% at 90% 0%, rgba(143, 17, 27, 0.35), transparent 70%),
+    var(--card);
+  box-shadow: 0 40px 80px -50px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+.project-row { min-width: 0; }
+@media (hover: hover) {
+  .project-row:hover {
+    border-color: rgba(217, 138, 145, 0.55);
+    box-shadow: 0 40px 90px -40px rgba(197, 43, 58, 0.35);
+  }
+  .project-row:hover .proj-media { transform: translateY(-4px); }
+}
+.project-row.is-reverse { grid-template-columns: 0.8fr 1.2fr; }
+.project-row.is-reverse .proj-media { order: 2; }
+
+/* Oversized outlined index numeral */
+.proj-bignum {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: -0.18em;
+  font-family: var(--font-serif);
+  font-size: clamp(7rem, 16vw, 14rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 240, 208, 0.08);
+  pointer-events: none;
+  user-select: none;
+}
+.project-row.is-reverse .proj-bignum { right: auto; left: clamp(1rem, 3vw, 2.5rem); }
+
+.proj-media {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 10.5;
+  background: radial-gradient(ellipse at 50% 0%, rgba(143, 17, 27, 0.55), rgba(53, 7, 7, 0.95));
+  border: 1px solid var(--cream-faint);
+  padding: clamp(0.5rem, 1.2vw, 0.9rem);
+  transition: transform 0.7s var(--ease-premium);
+}
+.proj-media a { display: block; width: 100%; height: 100%; }
+.proj-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.9s var(--ease-premium);
+}
+@media (hover: hover) { .project-row:hover .proj-media img { transform: scale(1.035); } }
+
+.proj-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(53, 7, 7, 0.82);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  font-family: var(--font-sans-bold);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream);
+  max-width: calc(100% - 2rem);
+}
+
+.proj-copy { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 0.35rem; }
+.proj-number {
+  font-family: var(--font-sans-bold);
+  font-size: var(--fs-label);
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  font-weight: 700;
+}
+.proj-title { font-size: var(--fs-h2); margin-top: 0.5rem; color: var(--cream); overflow-wrap: break-word; }
+.proj-desc { margin-top: 0.9rem; color: var(--cream-dim); font-weight: 300; font-size: 0.95rem; max-width: 34rem; }
+
+.proj-features { display: grid; gap: 0.4rem; margin-top: 0.9rem; max-width: 34rem; }
+.proj-features li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--cream-dim);
+}
+.proj-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 1px;
+  background: var(--pink);
+}
+
+.proj-stack { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.2rem; }
+.proj-stack li {
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(143, 17, 27, 0.22);
+}
+
+.proj-links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--cream-dim);
+  font-family: var(--font-sans-bold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 0.4s var(--ease-premium), color 0.4s var(--ease-premium), border-color 0.4s ease;
+}
+.proj-link--primary { background: var(--cream); color: var(--bg); border-color: var(--cream); }
+.proj-link:hover { background: var(--red); border-color: var(--red); color: var(--cream); }
+.proj-link:focus-visible { outline-offset: 3px; }
+.proj-link .arrow { transition: transform 0.4s var(--ease-premium); }
+.proj-link:hover .arrow { transform: translate(2px, -2px); }
+
+/* Card-only pieces are hidden on desktop */
+.proj-tag--card, .proj-more { display: none; }
+
+/* ---------- Tablet & phone: vertical card, in the reference order ----------
+   category pill → number → preview → title → description → (features) → tags → buttons */
+@media (max-width: 900px) {
+  .project-row, .project-row.is-reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: clamp(1.1rem, 3.4vw, 1.6rem);
+  }
+  .proj-copy { display: contents; }
+  .proj-copy > * { position: relative; z-index: 1; }
+  .project-row.is-reverse .proj-media { order: 3; }
+  .proj-media > .proj-tag { display: none; } /* overlay pill → replaced by the card pill */
+
+  .proj-tag--card {
+    order: 1;
+    display: inline-flex;
+    align-self: flex-start;
+    position: static;
+    max-width: 100%;
+    padding: 0.62rem 1.1rem;
+    border: 1px solid rgba(217, 138, 145, 0.6);
+    background: rgba(143, 17, 27, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    font-size: clamp(0.62rem, 2.5vw, 0.76rem);
+    letter-spacing: 0.14em;
+  }
+  .proj-number {
+    order: 2;
+    margin: 1rem 0 0.9rem 0.25rem;
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+    letter-spacing: 0.14em;
+    color: var(--cream);
+  }
+  .proj-media { order: 3; }
+  .proj-title { order: 4; margin-top: 1.3rem; font-size: clamp(2rem, 5.2vw, 2.7rem); line-height: 1.1; }
+  .proj-desc { order: 5; margin-top: 0.95rem; max-width: none; font-size: clamp(0.95rem, 2.4vw, 1.02rem); line-height: 1.65; }
+  .proj-more { order: 6; }
+  .proj-features { order: 7; max-width: none; }
+  .proj-stack { order: 8; margin-top: 1.25rem; gap: 0.5rem; }
+  .proj-stack li { font-size: 0.8rem; padding: 0.42rem 0.95rem; }
+  .proj-links { order: 9; flex-direction: column; flex-wrap: nowrap; gap: 0.8rem; margin-top: 1.5rem; }
+  .proj-links .proj-link {
+    justify-content: center;
+    padding: 1.05rem 1.3rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+  }
+  .proj-bignum, .project-row.is-reverse .proj-bignum { right: 0.8rem; left: auto; font-size: 7rem; }
+}
+
+/* ---------- Phones: compact card with optional details ---------- */
+@media (max-width: 640px) {
+  .project-row { border-radius: 26px; padding: 1.2rem; }
+  .proj-title { font-size: clamp(1.9rem, 9.4vw, 2.5rem); }
+  .proj-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+  }
+  .project-row.is-expanded .proj-desc { -webkit-line-clamp: unset; line-clamp: unset; display: block; overflow: visible; }
+  .proj-features { display: none; margin-top: 0.4rem; }
+  .project-row.is-expanded .proj-features { display: grid; }
+  .proj-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    margin-top: 0.55rem;
+    padding: 0.5rem 0;
+    min-height: 2.75rem;
+    font-family: var(--font-sans-bold);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pink);
+    transition: color 0.3s ease;
+  }
+  .proj-more:hover { color: var(--cream); }
+  .proj-more span { display: inline-grid; place-items: center; width: 1.25rem; height: 1.25rem; border: 1px solid rgba(217, 138, 145, 0.6); border-radius: 50%; font-size: 0.9rem; line-height: 1; }
+  .proj-bignum, .project-row.is-reverse .proj-bignum { font-size: 5.5rem; }
+}
+@media (max-width: 380px) {
+  .project-row { padding: 1rem; border-radius: 22px; }
+  .proj-tag--card { font-size: 0.58rem; padding: 0.55rem 0.9rem; }
+}

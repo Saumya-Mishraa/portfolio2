@@ -1,0 +1,135 @@
+.contact {
+  background: var(--bg);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.contact-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse 70% 80% at 85% 10%, rgba(217, 138, 145, 0.35), transparent 65%),
+    linear-gradient(135deg, var(--burgundy) 0%, var(--crimson) 55%, var(--red) 130%);
+  background-size: 140% 140%;
+  animation: contactShift 16s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+@keyframes contactShift {
+  from { background-position: 0% 30%; }
+  to { background-position: 100% 70%; }
+}
+
+.contact-heading {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.3rem, 5.6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-top: 1.2rem;
+}
+.contact-heading .contact-accent { font-style: italic; color: var(--pink); }
+
+.contact-invite {
+  margin-top: 1.8rem;
+  max-width: 30rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: 16px;
+  background: rgba(53, 7, 7, 0.55);
+  border: 1px solid rgba(255, 240, 208, 0.12);
+  color: var(--cream);
+  font-size: 0.95rem;
+}
+
+.contact-email { margin-top: 1.8rem; max-width: 100%; }
+.contact-email .magnetic-inner { flex-wrap: wrap; overflow-wrap: anywhere; }
+
+.contact-social { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem; }
+.contact-social a {
+  font-family: var(--font-sans-bold);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.contact-social a:hover { border-color: var(--cream); }
+
+/* Form card */
+.contact-form-wrap { position: relative; margin-top: 3.2rem; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  border-radius: 24px;
+  background: rgba(53, 7, 7, 0.72);
+  border: 1px solid rgba(255, 240, 208, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-field label {
+  font-family: var(--font-sans-bold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--cream-faint);
+  padding: 0.6rem 0.1rem;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--cream); outline: none; }
+/* 16px minimum stops iOS Safari zooming the page when a field is focused */
+.form-field input, .form-field textarea { font-size: max(1rem, 16px); }
+
+.contact-submit { align-self: flex-start; max-width: 100%; margin-top: 0.4rem; }
+.contact-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.form-note { font-size: 0.85rem; padding: 0.9rem 1rem; border-radius: var(--radius-sm); overflow-wrap: anywhere; }
+.form-note--warn { background: rgba(197, 43, 58, 0.3); color: var(--cream); }
+.form-note--success { background: rgba(255, 240, 208, 0.14); color: var(--cream); }
+
+@media (max-width: 960px) {
+  .contact-inner { grid-template-columns: minmax(0, 1fr); }
+}
+/* The shifting gradient repaints every frame; fine on desktop, wasteful on phones */
+@media (max-width: 860px) {
+  .contact-inner { animation: none; background-size: 100% 100%; }
+}
+@media (max-width: 480px) {
+  /* "MEANINGFUL." is ≈6.9em wide; this keeps it inside the card down to 320px */
+  .contact-heading { font-size: clamp(1.9rem, 9.2vw, 3rem); }
+}
+@media (max-width: 380px) {
+  .contact-inner { padding: 1.6rem 1.15rem; }
+  .contact-email { padding: 0.9rem 1.1rem; font-size: 0.7rem; letter-spacing: 0.05em; }
+  .contact-form { padding-left: 1.1rem; padding-right: 1.1rem; }
+}
+@media (max-width: 480px) {
+  .contact-inner { border-radius: 26px; }
+  .contact-email { width: 100%; }
+}

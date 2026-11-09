@@ -1,0 +1,36 @@
+:root {
+  /* Palette — burgundy editorial */
+  --bg: #350707;
+  --burgundy: #4a090d;
+  --crimson: #8f111b;
+  --red: #c52b3a;
+  --cream: #fff0d0;
+  --pink: #d98a91;
+  --cream-dim: rgba(255, 240, 208, 0.7);
+  --cream-faint: rgba(255, 240, 208, 0.16);
+  --line: rgba(197, 43, 58, 0.38);
+  --card: linear-gradient(145deg, rgba(74, 9, 13, 0.92), rgba(53, 7, 7, 0.92));
+
+  /* Typography */
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans-bold: "Montserrat", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-serif);
+
+  /* Type scale */
+  --fs-h1: clamp(2.4rem, 5.4vw, 4.8rem);
+  --fs-h2: clamp(1.8rem, 3.6vw, 3rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.7rem);
+  --fs-body: clamp(0.98rem, 1.05vw, 1.08rem);
+  --fs-label: 0.74rem;
+
+  /* Layout */
+  --edge: clamp(1.25rem, 5vw, 4.5rem);
+  --max-width: 1400px;
+  --radius-sm: 10px;
+  --radius-md: 22px;
+  --nav-h: 4.5rem;
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}

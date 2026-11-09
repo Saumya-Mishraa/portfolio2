@@ -1,0 +1,89 @@
+.about {
+  background: linear-gradient(180deg, var(--bg) 0%, #3f0809 100%);
+}
+
+.about-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+}
+.about-orb--a { width: 32rem; height: 32rem; left: -12rem; top: 8%; background: rgba(143, 17, 27, 0.35); }
+.about-orb--b { width: 24rem; height: 24rem; right: -8rem; bottom: 4%; background: rgba(197, 43, 58, 0.2); }
+
+.about-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.about-title { max-width: 14ch; }
+
+.about-lede {
+  margin-top: 2rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  color: var(--pink);
+  max-width: 34rem;
+}
+.about-copy {
+  margin-top: 1.2rem;
+  color: var(--cream-dim);
+  max-width: 34rem;
+  font-weight: 300;
+}
+
+.about-mini-label {
+  display: block;
+  font-family: var(--font-sans-bold);
+  font-size: var(--fs-label);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 700;
+  margin: 2.6rem 0 0.9rem;
+}
+.about-combine { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.about-combine li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(74, 9, 13, 0.55);
+  font-size: 0.82rem;
+  color: var(--cream);
+}
+.about-combine-num { font-size: 0.68rem; color: var(--pink); font-weight: 700; letter-spacing: 0.08em; }
+
+.about-right { display: flex; flex-direction: column; gap: 1rem; padding-top: clamp(0rem, 3vw, 3rem); }
+.about-card {
+  position: relative;
+  padding: clamp(1.4rem, 2.4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.4s ease, transform 0.5s var(--ease-premium);
+}
+.about-card:hover { border-color: rgba(217, 138, 145, 0.6); transform: translateY(-3px); }
+.about-card-label {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+.about-card p { color: var(--cream-dim); font-size: 0.95rem; }
+
+@media (max-width: 860px) {
+  .about-orb { filter: blur(48px); }
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-right { padding-top: 0; }
+}

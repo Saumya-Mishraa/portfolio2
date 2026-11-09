@@ -1,0 +1,62 @@
+.resume { background: var(--bg); padding-top: 0; }
+.resume-inner {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(1.8rem, 4vw, 3.5rem);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(143, 17, 27, 0.45), transparent 70%), var(--card);
+}
+.resume-copy .section-title { font-size: var(--fs-h2); margin: 1rem 0 1.1rem; }
+.resume-copy p { color: var(--cream-dim); max-width: 30rem; }
+.resume-actions { display: flex; gap: 0.8rem; margin-top: 2rem; flex-wrap: wrap; }
+.resume-panel {
+  display: block;
+  background: rgba(53, 7, 7, 0.85);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  perspective: 800px;
+  border: 1px solid var(--line);
+  transition: border-color 0.4s ease, transform 0.5s var(--ease-premium);
+}
+.resume-panel:hover { border-color: var(--pink); transform: translateY(-4px); }
+.resume-panel-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sans-bold);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--cream-faint);
+  margin-bottom: 1.3rem;
+}
+.resume-panel-role {
+  margin: -0.4rem 0 1.3rem;
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+}
+.resume-panel-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin-top: 1.4rem;
+}
+.resume-panel-sections li {
+  font-family: var(--font-sans-bold);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  border: 1px solid var(--cream-faint);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+}
+.resume-panel-lines { display: flex; flex-direction: column; gap: 0.7rem; }
+.resume-panel-lines span { display: block; height: 7px; border-radius: 4px; background: var(--cream-faint); }
+.resume-panel-lines span:first-child { background: var(--red); opacity: 0.9; }
+@media (max-width: 860px) { .resume-inner { grid-template-columns: minmax(0, 1fr); } }

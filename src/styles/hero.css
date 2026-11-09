@@ -1,0 +1,368 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 0 clamp(var(--edge), 5.3vw, 9rem);
+  background: radial-gradient(ellipse 75% 85% at 50% 42%, #b2192a 0%, #8f111b 28%, #5a0b10 62%, var(--bg) 100%);
+}
+
+/* Slowly drifting light, adds depth to the gradient */
+.hero-glow {
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 35% 40% at 30% 35%, rgba(217, 138, 145, 0.28), transparent 70%),
+    radial-gradient(ellipse 40% 45% at 75% 60%, rgba(197, 43, 58, 0.4), transparent 70%);
+  animation: heroDrift 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroDrift {
+  from { transform: translate3d(-3%, -2%, 0) scale(1); }
+  to { transform: translate3d(3%, 3%, 0) scale(1.08); }
+}
+
+/* Fade into the next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 11%;
+  background: linear-gradient(180deg, transparent, var(--bg));
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-stage {
+  /* Full screen, but never absurdly tall on portrait monitors / big tablets */
+  --stage-h: min(max(100svh, 46rem), 72rem);
+  /* Portrait width: ~44vw on wide screens, never taller than ~109% of the stage */
+  --pw: min(44vw, calc(var(--stage-h) * 0.8175));
+  position: relative;
+  max-width: 2400px;
+  margin: 0 auto;
+  height: var(--stage-h);
+}
+
+/* Oversized editorial wordmark, tone-on-tone, behind the portrait.
+   Centred with left/right + text-align (not a CSS transform) so GSAP can animate it
+   without freezing a pixel offset that breaks on resize or rotation. */
+.hero-portfolio {
+  position: absolute;
+  top: clamp(4.6rem, 10vh, 7.5rem);
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(5.5rem, 19vw, 29rem);
+  line-height: 0.85;
+  letter-spacing: -0.035em;
+  color: var(--bg);
+  white-space: nowrap;
+  user-select: none;
+  will-change: transform;
+}
+
+/* Portrait is centred at 43% of the stage (wrapper spans 0–86%). Its top sits ~12.5% down the
+   stage; if it is shorter than the stage it drops to the bottom edge instead, and if it is taller
+   the shoulders bleed off the bottom (the hero clips them), as in the design reference. */
+.hero-portrait {
+  position: absolute;
+  left: 0;
+  width: 86%;
+  top: max(calc(var(--stage-h) * 0.125), calc(var(--stage-h) - var(--pw) * 1.334));
+  height: calc(var(--pw) * 1.334);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+}
+.hero-portrait-frame {
+  position: relative;
+  height: 100%;
+  width: var(--pw);
+  aspect-ratio: 868 / 1158;
+  filter: drop-shadow(0 30px 50px rgba(53, 7, 7, 0.55));
+}
+.hero-portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: 8% -12% 0;
+  z-index: -1;
+  background: radial-gradient(ellipse 50% 55% at 50% 40%, rgba(255, 150, 160, 0.38), transparent 70%);
+}
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  will-change: transform;
+}
+
+/* Left: specialties */
+.hero-specialties {
+  position: absolute;
+  left: 0;
+  top: 59%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: min(24vw, 34rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hero-specialty {
+  font-family: var(--font-sans-bold);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+/* Right: title stack + intro */
+.hero-right {
+  position: absolute;
+  right: 0;
+  bottom: clamp(2.6rem, 5.5vh, 5rem);
+  z-index: 5;
+  width: max-content;
+  max-width: 48vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-name {
+  font-family: var(--font-sans-bold);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.2vw, 1.7rem);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 0.7rem;
+  padding-left: 0.2rem;
+}
+.hero-big {
+  font-family: var(--font-sans-bold);
+  font-weight: 900;
+  font-size: clamp(2.6rem, 5.4vw, 8.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hero-big--solid { color: var(--cream); }
+.hero-filters { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
+.hero-outline-word {
+  display: inline-block;
+  color: var(--cream);
+  filter: url(#hero-outline);
+}
+.hero-amp {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-transform: none;
+  color: var(--pink);
+  margin-right: 0.08em;
+}
+.hero-intro {
+  margin-top: 1.5rem;
+  margin-left: clamp(0px, 2.4vw, 3.6rem);
+  max-width: min(28vw, 34rem);
+  color: var(--cream);
+  font-size: clamp(0.9rem, 1.02vw, 1.4rem);
+  text-shadow: 0 2px 14px rgba(53, 7, 7, 0.7);
+}
+.hero-actions {
+  margin-top: 1.5rem;
+  margin-left: clamp(0px, 2.4vw, 3.6rem);
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Bottom-left social handles */
+.hero-social {
+  position: absolute;
+  left: 0;
+  bottom: clamp(2.4rem, 6vh, 4.2rem);
+  z-index: 5;
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.hero-social-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  min-width: 7.5rem;
+}
+.hero-social-label {
+  font-family: var(--font-sans-bold);
+  font-weight: 800;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+}
+.hero-social-handle { color: var(--cream-dim); transition: color 0.3s ease; }
+.hero-social-item:hover .hero-social-handle { color: var(--cream); }
+.hero-social-bar {
+  display: block;
+  height: 2px;
+  width: 3.2rem;
+  margin-top: 0.4rem;
+  background: var(--cream);
+  transition: width 0.5s var(--ease-premium);
+}
+.hero-social-item:hover .hero-social-bar { width: 100%; }
+
+/* ---------- Small laptops / landscape tablets: same composition, tightened ---------- */
+@media (min-width: 861px) and (max-width: 1180px) and (min-height: 521px) {
+  .hero-specialties { width: min(22vw, 16rem); }
+  .hero-specialty { font-size: clamp(0.95rem, 1.9vw, 1.35rem); }
+  .hero-right { max-width: 50vw; }
+  .hero-big { font-size: clamp(2.3rem, 5.6vw, 4.4rem); }
+  .hero-intro { max-width: 22rem; margin-left: 1.6vw; }
+  .hero-actions { margin-left: 1.6vw; }
+  .hero-social { gap: 1.4rem; }
+  .hero-social-item { min-width: 6.5rem; }
+}
+
+/* ---------- Tablet portrait & mobile: flow layout ---------- */
+@media (max-width: 860px), (max-width: 1100px) and (orientation: portrait), (max-width: 1100px) and (max-height: 520px) and (orientation: landscape) {
+  .hero-stage {
+    height: auto;
+    padding: clamp(5.5rem, 14vw, 7rem) 0 3.5rem;
+    display: grid;
+    /* minmax(0,…) stops the nowrap wordmark from stretching the column past the viewport */
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: left;
+  }
+  .hero-portfolio {
+    position: relative;
+    top: auto; left: auto; right: auto;
+    grid-row: 1;
+    width: 100%;
+    text-align: center;
+    /* "Portfolio" is ≈3.8em wide → 21.5vw keeps it inside the 90vw content box */
+    font-size: clamp(3.4rem, 21.5vw, 14rem);
+    margin-bottom: -0.28em;
+  }
+  .hero-portrait {
+    position: relative;
+    top: auto; bottom: auto; left: auto;
+    grid-row: 2;
+    height: auto;
+    width: min(76vw, 30rem);
+  }
+  .hero-portrait-frame { height: auto; width: 100%; max-width: none; }
+  .hero-portrait-img {
+    /* side + shoulder edges are feathered inside the image itself; only the long bottom fade is needed here */
+    -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
+  }
+  .hero-specialties {
+    position: relative;
+    top: auto;
+    transform: none;
+    grid-row: 3;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.4rem;
+    margin-top: 1.2rem;
+  }
+  .hero-specialty { font-size: clamp(0.85rem, 3.2vw, 1.15rem); }
+  .hero-specialty + .hero-specialty::before {
+    content: "·";
+    margin-right: 1.4rem;
+    color: var(--pink);
+  }
+  .hero-right {
+    position: relative;
+    right: auto; bottom: auto;
+    grid-row: 4;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-name { padding-left: 0; font-size: clamp(0.72rem, 2.6vw, 1rem); letter-spacing: 0.3em; }
+  /* 8.4em ≈ widest line ("& DESIGNER"); 10.6vw keeps it inside the viewport even at 320px */
+  .hero-big { font-size: clamp(2rem, 10.6vw, 6.2rem); }
+  .hero-intro { max-width: 30rem; margin-left: 0; font-size: clamp(0.92rem, 2.2vw, 1.05rem); }
+  .hero-actions { justify-content: center; margin-left: 0; }
+  .hero-social {
+    position: relative;
+    left: auto; bottom: auto;
+    grid-row: 5;
+    margin-top: 2.4rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-social-item { align-items: center; }
+  .hero-social-bar { width: 2.4rem; }
+}
+
+/* Narrow phones: stack the three specialties instead of letting a separator dot orphan */
+@media (max-width: 700px) {
+  .hero-specialties { flex-direction: column; align-items: center; gap: 0.35rem; }
+  .hero-specialty + .hero-specialty::before { content: none; }
+  .hero-portrait { width: min(80vw, 24rem); }
+}
+
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-actions .magnetic-inner { justify-content: center; }
+}
+
+/* Slow ambient drift is costly on phones; keep the light but calm it down */
+@media (max-width: 860px) {
+  .hero-glow { animation-duration: 34s; }
+}
+
+/* ---------- Landscape phones: text on the left, portrait on the right ---------- */
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 1100px) {
+  .hero-stage {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: clamp(1rem, 4vw, 2.5rem);
+    justify-items: start;
+    align-items: start;
+    padding: 4.6rem 0 2.2rem;
+  }
+  .hero-portfolio {
+    grid-column: 1; grid-row: 1;
+    text-align: left;
+    font-size: clamp(3rem, 12vw, 8rem);
+    margin-bottom: 0;
+  }
+  .hero-portrait {
+    grid-column: 2; grid-row: 1 / span 4;
+    align-self: end;
+    justify-self: center;
+    width: min(100%, 22rem);
+  }
+  .hero-specialties { grid-column: 1; grid-row: 2; justify-content: flex-start; align-items: flex-start; flex-direction: row; gap: 0.25rem 1.2rem; margin-top: 0.9rem; }
+  .hero-specialty { font-size: clamp(0.72rem, 1.9vw, 0.95rem); }
+  /* no separator dots here: with two columns the row wraps unpredictably */
+  .hero-specialty + .hero-specialty::before { content: none; }
+  .hero-right { grid-column: 1; grid-row: 3; align-items: flex-start; text-align: left; margin-top: 1.2rem; }
+  .hero-big { font-size: clamp(1.7rem, 5.2vw, 3.2rem); }
+  .hero-actions { justify-content: flex-start; flex-direction: row; width: auto; margin-top: 1rem; margin-left: 0; }
+  .hero-actions .btn { width: auto; }
+  .hero-intro { margin-top: 0.9rem; margin-left: 0; max-width: 24rem; }
+  .hero-social { grid-column: 1; grid-row: 4; justify-content: flex-start; margin-top: 1.4rem; }
+  .hero-social-item { align-items: flex-start; }
+}

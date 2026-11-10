@@ -15,8 +15,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/saumya-mishra-a20387373/)
 [![Email](https://img.shields.io/badge/Email-Get%20in%20touch-e879a5?style=flat-square&logo=gmail&logoColor=white)](mailto:imsaumya48@gmail.com)
 
-![Profile Views](https://komarev.com/ghpvc/?username=Saumya-Mishraa&color=e879a5&style=flat-square&label=PROFILE+VIEWS)
-
 </div>
 
 ---

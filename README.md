@@ -1,295 +1,214 @@
-# ✦ Saumya Mishra — Full Stack Developer Portfolio
+ <div align="center">
 
-<p align="center">
-  <strong>Building modern web experiences with code, creativity & interaction.</strong>
-</p>
+# SAUMYA MISHRA
 
-<p align="center">
-  <a href="https://github.com/Saumya-Mishraa">GitHub</a>
-  &nbsp;•&nbsp;
-  <a href="https://www.linkedin.com/in/saumya-mishra-a20387373/">LinkedIn</a>
-  &nbsp;•&nbsp;
-  <a href="mailto:imsaumya48@gmail.com">Email</a>
-</p>
+### Full Stack Developer · UI/UX Enthusiast
 
----
+*Turning ideas into thoughtful digital experiences.*
 
-## ✨ About The Portfolio
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Playfair+Display&size=22&duration=3000&pause=1000&color=E879A5&center=true&vCenter=true&width=550&lines=Building+for+the+web.;Designing+with+purpose.;Developing+with+creativity.;Creating+experiences+that+matter.)](https://git.io/typing-svg)
 
-This is my personal developer portfolio, designed and developed from scratch using **React + Vite**.
+<br/>
 
-The portfolio brings together my work in **Full Stack Development, UI/UX, interactive experiences, animation, and modern web technologies** in a responsive and motion-focused interface.
+[![Portfolio](https://img.shields.io/badge/PORTFOLIO-Visit%20Website-e879a5?style=flat-square)](https://portfolio2-ten-iota-63.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Saumya--Mishraa-181717?style=flat-square&logo=github)](https://github.com/Saumya-Mishraa)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/saumya-mishra-a20387373/)
+[![Email](https://img.shields.io/badge/Email-Get%20in%20touch-e879a5?style=flat-square&logo=gmail&logoColor=white)](mailto:imsaumya48@gmail.com)
 
-> **Design. Develop. Animate. Deliver.**
+![Profile Views](https://komarev.com/ghpvc/?username=Saumya-Mishraa&color=e879a5&style=flat-square&label=PROFILE+VIEWS)
+
+</div>
 
 ---
 
-## 🎯 Portfolio Highlights
+## 01 — A Little About Me
 
-- ✦ Modern editorial-inspired interface
-- ✦ Smooth GSAP & ScrollTrigger animations
-- ✦ Interactive project showcase
-- ✦ Custom cursor interactions
-- ✦ Magnetic buttons & micro-interactions
-- ✦ Responsive mobile navigation
-- ✦ Fully responsive across devices
-- ✦ Technology icons in the skills section
-- ✦ Resume view & download
-- ✦ Working contact form powered by Formspree
-- ✦ GitHub, LinkedIn & live project links
-- ✦ Accessibility support with reduced-motion handling
+Hey, I'm **Saumya Mishra**, a Full Stack Developer and BCA student who enjoys building digital products that bring together functionality and visual storytelling.
 
----
+I work across the frontend and backend, with a strong interest in creating intuitive interfaces, interactive experiences and scalable web applications.
 
-## 🧩 Sections
+My approach combines:
 
-| Section | Highlights |
-| :--- | :--- |
-| 🏠 **Hero** | Introduction and interactive landing experience |
-| 💼 **Selected Work** | Featured development projects |
-| 👩🏻 **About** | Background and development journey |
-| ⚡ **Skills** | Technologies, tools and development skills |
-| 💻 **Experience** | Professional experience |
-| 🎓 **Education** | Academic background |
-| 📄 **Resume** | View and download resume |
-| ✉️ **Contact** | Working contact form |
+- **Development** — Building responsive, functional web applications.
+- **Design** — Creating clean and intuitive UI/UX experiences.
+- **Interaction** — Bringing interfaces to life with animations and micro-interactions.
+- **Problem Solving** — Turning ideas into practical digital solutions.
+
+Currently exploring better ways to build, design and deliver meaningful products.
+
+> Good design catches attention. Good development makes it work. Great experiences bring both together.
 
 ---
 
-# 🚀 Featured Projects
+## 02 — Selected Projects
 
-## 💬 Velora — Real-Time Chat Application
+*A collection of things I've designed, developed and brought to life.*
 
-A full-stack real-time communication platform with group chat, WebRTC voice and video calls, 24-hour Status updates and shared Moments.
+### 01. Velora — Real-Time Communication
 
-**Tech Stack**
+A full-stack communication platform featuring real-time messaging, group conversations, voice/video calling and interactive status updates.
 
-`React` `Vite` `Tailwind CSS` `Node.js` `Express.js` `Socket.IO` `MongoDB` `WebRTC`
+**Stack:** React · Node.js · Express · Socket.IO · MongoDB · WebRTC
 
-🔗 **[Live Demo](https://velora-real-time-chat-ecru.vercel.app/)** · **[GitHub](https://github.com/Saumya-Mishraa/velora-real-time-chat)**
-
----
-
-## 👥 Employee Management System
-
-A web-based employee management application designed to manage employee information through a structured and intuitive interface.
-
-**Tech Stack**
-
-`React` `Node.js` `Express.js` `MongoDB`
-
-🔗 **[View on GitHub](https://github.com/Saumya-Mishraa/Employee-Management-System)**
+[Live Experience ↗](https://velora-real-time-chat-ecru.vercel.app/) · [Source Code ↗](https://github.com/Saumya-Mishraa/velora-real-time-chat)
 
 ---
 
-## 🧸 Soft Toy Store
+### 02. FlowForge — Visual API Workflow Platform
 
-A responsive e-commerce style web experience for browsing and exploring soft toy products.
+A developer-focused platform for testing REST APIs and designing multi-step API workflows through a visual workflow editor and execution engine.
 
-🔗 **[Live Demo](https://saumya-mishraa.github.io/Soft-Toy-Store/)**
+**Stack:** React · Node.js · Express · MongoDB · React Flow · JWT
+
+[Live Experience ↗](https://flow-forge-three-xi.vercel.app/) · [Source Code ↗](https://github.com/Saumya-Mishraa/FlowForge)
 
 ---
 
-## 🧭 Campus Wellness Compass
+### 03. Maison Atelier — Fashion E-commerce
+
+An editorial-inspired fashion storefront featuring curated product collections, category navigation, product cards and a style journal.
+
+**Focus:** Frontend Development · UI Design · Responsive Interfaces
+
+[Live Experience ↗](https://maison-atelier-xi.vercel.app/)
+
+---
+
+### 04. Vyra Coffee House — Digital Café Experience
+
+A modern café website with an editorial visual direction, interactive menu, add-to-bag functionality and mobile-friendly navigation.
+
+**Focus:** React · UI/UX · Responsive Design · Interaction
+
+[Live Experience ↗](https://vyra-coffee-house-ftc9.vercel.app/)
+
+---
+
+### 05. Campus Wellness Compass — Student Wellness
 
 A campus-focused wellness platform designed to provide students with an engaging and accessible digital experience.
 
-🔗 **[Live Demo](https://campus-wellness-compass-azm.caffeine.xyz/)**
+**Focus:** Web Development · UI/UX · User Experience
+
+[Live Experience ↗](https://campus-wellness-compass-azm.caffeine.xyz/)
 
 ---
 
-## ☕ Vyra Coffee House
+### 06. Financial Insight — NLP Document Analyzer
 
-An editorial café website with a menu of drinks, add-to-bag actions and a mobile bottom tab bar.
+An intelligent financial document analysis project focused on extracting information and generating meaningful insights from financial documents.
 
-🔗 **[Live Demo](https://vyra-coffee-house-ftc9.vercel.app/)**
+**Focus:** NLP · Python · Document Processing · Data Analysis
 
----
-
-## 🧥 Maison Atelier
-
-A fashion storefront frontend with category tabs, product cards and a style journal.
-
-🔗 **[Live Demo](https://maison-atelier-xi.vercel.app/)**
+[Source Code ↗](https://github.com/Saumya-Mishraa/financial-insight-nlp)
 
 ---
 
-## 🔗 FlowForge
+### 07. Employee Management System
 
-A full-stack developer platform for testing REST APIs and designing multi-step API workflows with a real execution engine.
+A web-based application for managing employee information through a structured interface and backend integration.
 
-**Tech Stack**
+**Stack:** React · Node.js · Express · MongoDB
 
-`React` `Vite` `Tailwind CSS` `Node.js` `Express.js` `MongoDB` `React Flow` `JWT`
-
-🔗 **[Live Demo](https://flow-forge-three-xi.vercel.app/)** · **[GitHub](https://github.com/Saumya-Mishraa/FlowForge)**
+[Source Code ↗](https://github.com/Saumya-Mishraa/Employee-Management-System)
 
 ---
 
-# 🛠️ Tech Stack
+### 08. Soft Toy Store — E-commerce Website
+
+A responsive e-commerce-style website designed for browsing and exploring soft toy products.
+
+**Focus:** HTML · CSS · JavaScript · Responsive Design
+
+[Live Experience ↗](https://saumya-mishraa.github.io/Soft-Toy-Store/)
+
+---
+
+## 03 — Technologies & Tools
 
 ### Frontend
 
-`HTML5` `CSS3` `JavaScript` `React.js` `Vite` `Tailwind CSS` `Responsive Design`
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Material UI](https://img.shields.io/badge/Material_UI-007FFF?style=flat-square&logo=mui&logoColor=white)
 
-### Backend
+### Backend & Database
 
-`Node.js` `Express.js` `REST APIs` `JWT Authentication`
-
-### Database
-
-`MongoDB` `Mongoose` `MySQL`
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 
 ### Tools & Deployment
 
-`Git` `GitHub` `Postman` `npm` `VS Code` `Vercel` `Render` `GitHub Pages`
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black)
 
-### Additional
+### Design & Interaction
 
-`TypeScript` `Next.js` `AI-Assisted Development`
-
-### Motion & Interaction
-
-`GSAP` `ScrollTrigger` `Custom Cursor` `Magnetic Interactions` `Micro-interactions`
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=black)
+![UI/UX](https://img.shields.io/badge/UI%2FUX-Design-e879a5?style=flat-square)
 
 ---
 
-# 💫 Experience & Interaction
+## 04 — GitHub Activity
 
-### 🎞️ Motion-Driven UI
+<div align="center">
 
-GSAP and ScrollTrigger are used throughout the portfolio to create smooth and purposeful scroll-based animations.
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Saumya-Mishraa&show_icons=true&hide_border=true&title_color=e879a5&icon_color=e879a5&text_color=888888&bg_color=00000000" />
 
-### 🖱️ Interactive Elements
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Saumya-Mishraa&layout=compact&hide_border=true&title_color=e879a5&text_color=888888&bg_color=00000000" />
 
-The interface includes custom cursor interactions, magnetic buttons, hover effects and subtle micro-interactions.
+<br/><br/>
 
-### 📱 Responsive Design
+<img width="90%" src="https://streak-stats.demolab.com?user=Saumya-Mishraa&hide_border=true&background=00000000&ring=e879a5&fire=e879a5&currStreakLabel=e879a5&sideLabels=888888&dates=888888" />
 
-The portfolio is designed to provide a consistent experience across:
+</div>
 
-**Mobile → Tablet → Laptop → Desktop**
+---
 
-### ♿ Accessibility
+## 05 — Beyond The Code
 
-The portfolio respects the user's reduced-motion preference through:
+I believe development is not just about writing code. It's also about understanding people, visual communication and creating products that feel effortless to use.
 
-```text
-prefers-reduced-motion
+Outside development, I'm interested in:
 
-Animations are reduced or disabled when reduced motion is enabled.
+- UI/UX and interface design
+- Creative web experiences
+- Motion design and animation
+- Exploring new technologies
+- Building ideas into real products
 
-📁 Project Structure
-saumya-portfolio/
-│
-├── public/
-│   └── resume.pdf
-│
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── projects/
-│   │
-│   ├── components/
-│   ├── sections/
-│   ├── data/
-│   ├── styles/
-│   │
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── .env.example
-├── package.json
-├── vite.config.js
-└── README.md
-⚡ Getting Started
-1. Clone the repository
-git clone https://github.com/Saumya-Mishraa/Saumya-Portfolio.git
-2. Navigate to the project
-cd Saumya-Portfolio
-3. Install dependencies
-npm install
-4. Start the development server
-npm run dev
+---
 
-The development server will normally run at:
+## 06 — Let's Connect
 
-http://localhost:5173
-🏗️ Production Build
+I'm always interested in connecting with developers, designers, startups and people working on exciting ideas.
 
-Create an optimized production build:
+**Have a project, opportunity or just want to connect? Let's talk.**
 
-npm run build
+<div align="center">
 
-Preview the production build locally:
+[![LinkedIn](https://img.shields.io/badge/LET'S_CONNECT-LinkedIn-e879a5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saumya-mishra-a20387373/)
+[![Email](https://img.shields.io/badge/SAY_HELLO-Email-181717?style=for-the-badge&logo=gmail&logoColor=white)](mailto:imsaumya48@gmail.com)
 
-npm run preview
+<br/>
 
-Production files are generated inside:
+**Designed with intention. Developed with curiosity.**
 
-dist/
-📸 Assets
-Portrait
+*Saumya Mishra © 2026*
 
-The portfolio uses a personal portrait image as part of the portfolio presentation.
+✦ ───────────────────────── ✦
 
-Project Screenshots
-
-Project screenshots are stored inside the project's assets and are used throughout the project showcase.
-
-Resume
-
-The resume is located at:
-
-public/resume.pdf
-
-It is available through the portfolio's View Resume and Download PDF actions.
-
-📬 Contact Form
-
-The portfolio includes a working contact form powered by Formspree.
-
-Visitors can submit:
-
-Name
-Email
-Message
-
-Form submissions are delivered to the configured email inbox.
-
-🌐 Deployment
-
-The portfolio is optimized for deployment on Vercel.
-
-Production Configuration
-Framework        → Vite
-Build Command    → npm run build
-Output Directory → dist
-
-The project can also be deployed on other platforms that support Vite applications.
-
-👩🏻‍💻 About Me
-
-Hi, I'm Saumya Mishra.
-
-I'm a Full Stack Developer and BCA student passionate about building modern, responsive and interactive web applications.
-
-I enjoy combining:
-
-Frontend Development
-        ↓
-Backend Development
-        ↓
-Database Integration
-        ↓
-UI / UX Design
-        ↓
-Animation & Interaction
-
-My goal is to create digital experiences that are not only functional, but also beautiful, intuitive and memorable.
-
-🔗 Connect With Me
-<p align="center"> <a href="https://github.com/Saumya-Mishraa"> <strong>GitHub</strong> </a> &nbsp;•&nbsp; <a href="https://www.linkedin.com/in/saumya-mishra-a20387373/"> <strong>LinkedIn</strong> </a> &nbsp;•&nbsp; <a href="mailto:imsaumya48@gmail.com"> <strong>Email</strong> </a> </p>
-<p align="center"> <strong>Designed & Developed by Saumya Mishra</strong> <br/> <sub>React • Vite • GSAP • Full Stack Development</sub> </p> <p align="center"> ✦ ✦ ✦ </p> ```
-
-Important: GitHub ke README editor mein paste karte waqt sabse bahar wala ```md aur last wala ``` mat paste karna. Andar ka poora content paste karna hai.
+</div>
